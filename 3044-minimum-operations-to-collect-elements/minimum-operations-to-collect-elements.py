@@ -11,12 +11,7 @@ class Solution(object):
 
         for i in range(0,len(nums)+1):
             if set(target).issubset(set(collection)):
-                # print(collection)
-                # print(ops)
                 return ops
             
             collection.append(nums.pop())
             ops += 1
-
-        # print(collection)
-            
