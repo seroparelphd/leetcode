@@ -9,7 +9,6 @@ class Solution(object):
         word_min = min(len(word1),len(word2))
 
         for i in range(0,word_min):
-            print(word1[i])
             word3 += word1[i] + word2[i]
 
         if len(word1) > len(word2):
