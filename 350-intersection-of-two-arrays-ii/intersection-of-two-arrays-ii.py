@@ -1,28 +1,16 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        intersection = []
-        for num in nums1:
-            # print(num)
-            if num in nums2:
-                # print(num)
-                intersection.append(num)
-                nums2.remove(num)
-        return intersection
-
-
-        # nums1_ix = {}
-        # intersection = []
-        # for i, num in enumerate(nums1):
-        #     nums1_ix[i] = num
-        # # print(f"[DEBUG] nums1_ix = {nums1_ix}")
-        # for j, num2 in enumerate(nums2):
-        #     if num2 in nums1_ix.values():
-        #         intersection.append(num2)
-        #     if nums1_ix.get(num2):
-        #         # print(nums1_ix.get(num2))
-        #         # intersection.append(num2)
-        #         intersection.append(nums1_ix.get(num2))
-        #         # nums1_ix[num2] -= 1
-        
-        # # print(nums1_ix)
-        # # return intersection
+        nums1.sort()
+        nums2.sort()
+        i, j = 0, 0
+        result = []
+        while i < len(nums1) and j < len(nums2):
+            if nums1[i] == nums2[j]:
+                result.append(nums1[i])
+                i += 1
+                j += 1
+            elif nums1[i] < nums2[j]:
+                i += 1
+            else:  # nums1[i] > nums2[j] 
+                j += 1
+        return result
