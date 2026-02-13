@@ -6,13 +6,13 @@
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        # Base Case: What happens if the node is empty?
+        # If node empty
         if not root:
-            return 0 # Fill this in
-        # Recursive Step:
-        # 1. Get the depth of the left side
+            return 0
+        # print(f"root.val = {root.val}")
         left_depth = self.maxDepth(root.left)
-        # 2. Get the depth of the right side
+        # print(f"  left_depth = {left_depth}")
         right_depth = self.maxDepth(root.right)
-        # 3. Return the formula we discussed
-        return 1 + max(left_depth, right_depth) # Fill this in
+        # print(f"  right_depth = {right_depth}")
+        # print(f"1 + max(left_depth, right_depth) = {1 + max(left_depth, right_depth)}")
+        return 1 + max(left_depth, right_depth)
