@@ -1,13 +1,15 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        # 1. Initialize count dictionary
-        counts = {}
-        
-        # 2. Iterate through nums and count frequencies
-        # CRITICAL: Use the .get(key, 0) pattern you learned today!
-        for num in nums:
-            counts[num] = 1 + counts.get(num, 0)
+        count = 0
+        result = 0
 
-        # 3. Check for the majority element
-        # You can do this inside the loop or in a separate loop 
-        return max(counts, key = counts.get)       
+        for num in nums:
+            if count == 0:
+                result = num
+            
+            if num == result:
+                count += 1
+            else:
+                count -= 1
+
+        return result
