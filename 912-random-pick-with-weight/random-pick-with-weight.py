@@ -10,17 +10,14 @@ class Solution:
 
     def pickIndex(self) -> int:
         target = random.randint(1, self.total_sum)
-        # print(f"target = {target}")
         low, high = 0, len(self.prefix_sums) - 1
         while low <= high:
-            mid = low + (high - low) // 2
-            print(f"low = {low}, high = {high}, mid = {mid}")
+            mid = low + (high - low)//2
             if self.prefix_sums[mid] < target:
                 low = mid + 1
             else:
                 high = mid - 1
         return low
-
 
 
 # Your Solution object will be instantiated and called as such:
