@@ -1,0 +1,23 @@
+class Solution:
+    def tribonacci(self, n: int) -> int:
+        # # Base case: n = 1 or 2
+        # if n <= 2:
+        #     # return n
+        #     if n != 0:
+        #         return 1
+        #     else:
+        #         return 0
+            
+        # # Recursive case: climbStairs(n) = climbStairs(n - 1) + climbStairs(n - 2)
+        # # return self.climbStairs(n - 1) + self.climbStairs(n - 2)
+        # return self.tribonacci(n - 1) + self.tribonacci(n -  2) + self.tribonacci(n - 3)        
+
+        if n == 0:
+            return 0
+        if n <= 2:
+            return 1
+
+        a, b, c = 0, 1, 1
+        for _ in range(3, n + 1):
+            a, b, c = b, c, a + b + c
+        return c
