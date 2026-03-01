@@ -18,6 +18,20 @@ class Solution:
             return 1
 
         a, b, c = 0, 1, 1
-        for _ in range(3, n + 1):
+        for _ in range(3, n + 1):  # range(3, 4 + 1)
+            # a = b
+            # b = c 
+            # c = a + b + c 
             a, b, c = b, c, a + b + c
         return c
+
+# Input: n = 4
+# Output: 4
+# Explanation:
+# T_3 = 0 + 1 + 1 = 2
+# T_4 = 1 + 1 + 2 = 4
+
+# a = 1
+# b = 3
+# c = 7
+# _ = 4
