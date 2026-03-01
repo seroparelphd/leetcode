@@ -10,17 +10,17 @@ class Solution:
         if not root:
             return None
         
-        root.left, root.right = root.right, root.left
-        self.invertTree(root.left)
-        self.invertTree(root.right)
-        return root
-
-        # queue = deque([root])
-        # while queue:
-        #     current = queue.popleft()
-        #     current.left, current.right = current.right, current.left
-        #     if current.left:
-        #         queue.append(current.left)
-        #     if current.right:
-        #         queue.append(current.right)
+        # root.left, root.right = root.right, root.left
+        # self.invertTree(root.left)
+        # self.invertTree(root.right)
         # return root
+
+        queue = deque([root])
+        while queue:
+            current = queue.popleft()
+            current.left, current.right = current.right, current.left
+            if current.left:
+                queue.append(current.left)
+            if current.right:
+                queue.append(current.right)
+        return root
