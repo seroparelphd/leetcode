@@ -9,5 +9,4 @@ class Solution:
             diff = cur_sum - k
             count += prefix_sums.get(diff, 0)
             prefix_sums[cur_sum] = 1 + prefix_sums.get(cur_sum, 0)
-
         return count
