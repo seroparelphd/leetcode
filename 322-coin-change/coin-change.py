@@ -7,8 +7,12 @@ class Solution:
             for c in coins:
                 if a - c >= 0:
                     dp[a] = min(dp[a], 1 + dp[a - c])
-        
         if dp[amount] == amount + 1:
             return -1
-        else:
+        else: 
             return dp[amount]
+
+# a = 2
+# c = 1
+# ix = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+# dp = [0, 1, 2, _, _, _, _, _, _, _, _, 12]
