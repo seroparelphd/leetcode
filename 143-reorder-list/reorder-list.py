@@ -21,6 +21,6 @@ class Solution:
             i += 1
             nodes[j].next = nodes[i]
             j -= 1
-            # print(i, j)
+            print(i, j)
             # print(nodes[i])
         nodes[i].next = None
