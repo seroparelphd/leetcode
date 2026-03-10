@@ -22,5 +22,3 @@ class Solution:
             nodes[j].next = nodes[i]
             j -= 1
         nodes[i].next = None
-
-
