@@ -1,20 +1,17 @@
-class Solution(object):
-    def mergeAlternately(self, word1, word2):
-        """
-        :type word1: str
-        :type word2: str
-        :rtype: str
-        """
-        word3 = []
-        word_min = min(len(word1),len(word2))
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        pt1, pt2 = 0, 0
+        merged = []
+        
+        while pt1 < len(word1) and pt2 < len(word2):
+            merged.append(word1[pt1])
+            merged.append(word2[pt2])
+            # print(merged)
+            pt1 += 1
+            pt2 += 1
+        
+        merged.append(word1[pt1:])
+        merged.append(word2[pt2:])
+        merged = "".join(merged)
+        return merged
 
-        for i in range(0,word_min):
-            word3.append(word1[i])
-            word3.append(word2[i])
-
-        if len(word1) > len(word2):
-            word3.append(word1[word_min:])
-        else:
-            word3.append(word2[word_min:])
-
-        return "".join(word3)
