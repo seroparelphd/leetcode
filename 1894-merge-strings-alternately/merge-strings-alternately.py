@@ -19,6 +19,7 @@ from itertools import zip_longest
 
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        # zip_longest pairs characters and uses fillvalue='' for the shorter string
-        # Then we join them all in one shot
+        # 1. zip_longest creates an iterator in C (no Python loop overhead)
+        # 2. The generator expression (a + b...) stays in a lower-level execution layer
+        # 3. "".join() is a single C-call that pre-calculates memory needs
         return "".join(a + b for a, b in zip_longest(word1, word2, fillvalue=''))
