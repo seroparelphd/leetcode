@@ -2,13 +2,14 @@ class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         # while n > 0:
         for i in range(len(flowerbed)):
-            if n <= 0:  # If planted all flowers... stop
+            if n <= 0:  # If planted all flowers, then stop
                 return True
 
-            # Check if adjacent are empty T/F    
+            # Check if adjacent are boundary or empty T/F    
             left_empty = (i == 0) or (flowerbed[i-1] == 0)
             right_empty = (i == len(flowerbed) - 1) or (flowerbed[i+1] == 0)
 
+            # If current is empty AND adjacent are empty/boundary
             if flowerbed[i] == 0 and left_empty and right_empty:
                 flowerbed[i] = 1
                 n -= 1
