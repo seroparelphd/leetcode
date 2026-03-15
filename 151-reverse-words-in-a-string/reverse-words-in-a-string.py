@@ -5,5 +5,6 @@ class Solution:
         # print(reversed(s_list))
         # for word in s_list[::-1]:
         #     print(word)
-        reversed_words = words[::-1]
-        return " ".join(reversed_words)
+        # reversed_words = words[::-1]
+        # return " ".join(reversed_words)
+        return " ".join(words[::-1])
