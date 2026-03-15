@@ -8,3 +8,6 @@ class Solution:
         # reversed_words = words[::-1]
         # return " ".join(reversed_words)
         return " ".join(words[::-1])
+
+# Time: O(3N) -> O(N)
+# Space: O(3N) -> O(N)
