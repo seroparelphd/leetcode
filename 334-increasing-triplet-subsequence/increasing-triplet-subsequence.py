@@ -11,8 +11,8 @@ class Solution:
                 return True
         return False
 
-
 # nums = [2,1,5,0,4,6]
+#               f s
 # num = 6
 # first = 0
 # second = 4
