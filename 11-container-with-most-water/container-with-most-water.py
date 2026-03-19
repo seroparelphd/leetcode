@@ -6,13 +6,15 @@ class Solution:
             wd = r - l
             ht = min(height[l], height[r])
             area = max(area, wd * ht)
-            print(area)
+            # print(area)
             if height[l] < height[r]:
                 l += 1
             else:
                 r -= 1
         return area
 
+# Time: O(n), n = len(height)
+# Space: O(1)
 
 # height = [1,8,6,2,5,4,8,3,7]  len = 9
 #             l             r
