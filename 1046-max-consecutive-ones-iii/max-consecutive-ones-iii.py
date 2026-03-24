@@ -13,6 +13,7 @@ class Solution:
                     zero_count -= 1
                 l += 1
             
-            if max_consecutive < (r - l + 1):
-                max_consecutive += 1
+            # if max_consecutive < (r - l + 1):
+            #     max_consecutive += 1
+            max_consecutive = max(max_consecutive, r - l + 1)
         return max_consecutive
