@@ -7,3 +7,6 @@ class Solution:
         #     counter[num] += 1
         # print(counter)
         return len(counter.values()) == len(set(counter.values()))
+
+# Time: O(n)
+# Space: O(n)
