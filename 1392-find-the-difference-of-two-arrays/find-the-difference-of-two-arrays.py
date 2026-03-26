@@ -5,4 +5,3 @@ class Solution:
         diff1 = [x for x in set1 if x not in set2]
         diff2 = [y for y in set2 if y not in set1]
         return (list([diff1, diff2]))
-        # return
