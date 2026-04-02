@@ -26,29 +26,27 @@ class Solution:
         if not head or not head.next:
             return head
         
-        # Step 1: Dump all node values into a standard Python list
+        # Step 1: Collect all values into an array (Beginner-friendly)
         values = []
         curr = head
         while curr:
             values.append(curr.val)
             curr = curr.next
             
-        # Step 2: Separate the values by index into two lists
-        odds = []
-        evens = []
-        for i in range(len(values)):
-            if (i + 1) % 2 != 0: # Using 1-based indexing as per problem
-                odds.append(values[i])
-            else:
-                evens.append(values[i])
+        # Step 2: Separate odds and evens based on index
+        # This creates extra intermediate lists in memory
+        odds = [values[i] for i in range(len(values)) if i % 2 == 0]
+        evens = [values[i] for i in range(len(values)) if i % 2 != 0]
         
-        # Step 3: Combine them (Odds first, then Evens)
+        # Step 3: Combine them
         combined = odds + evens
         
-        # Step 4: Rebuild the linked list by overwriting values in the original
-        curr = head
+        # Step 4: Rebuild the linked list
+        # This involves another O(N) pass and potential object creation
+        dummy = ListNode(0)
+        curr = dummy
         for val in combined:
-            curr.val = val
+            curr.next = ListNode(val) # Creating brand new nodes is memory intensive
             curr = curr.next
             
-        return head
+        return dummy.next
