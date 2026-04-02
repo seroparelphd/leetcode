@@ -7,8 +7,8 @@ class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
             return None
-        elif not head.next:
-            return head
+        # elif not head.next:
+        #     return head
         
         odd = head
         even = head.next
