@@ -10,6 +10,8 @@ class Solution:
         def leaf_list(node, leaves):
             if not node:
                 return
+            print(f"node.val = {node.val}")
+            
             if not node.left and not node.right:
                 leaves.append(node.val)
             leaf_list(node.left, leaves)
