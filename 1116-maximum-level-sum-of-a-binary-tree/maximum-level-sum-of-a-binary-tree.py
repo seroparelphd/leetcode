@@ -18,7 +18,7 @@ class Solution:
                 print(f"i = {i}")
                 node = queue.popleft()
                 current_lv_sum += node.val
-                print(f"  current_lv_sum = {current_lv_sum}")
+                print(f"  node.val = {node.val} | current_lv_sum = {current_lv_sum}")
                 if node.left:
                     queue.append(node.left)
                 if node.right:
