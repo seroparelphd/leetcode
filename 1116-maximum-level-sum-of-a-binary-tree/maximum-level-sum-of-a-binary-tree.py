@@ -15,10 +15,10 @@ class Solution:
             queue_len = len(queue)              # Process current depth's nodes
             current_lv_sum = 0
             for i in range(queue_len):
-                print(f"i = {i}")
+                # print(f"i = {i}")
                 node = queue.popleft()
                 current_lv_sum += node.val
-                print(f"  node.val = {node.val} | current_lv_sum = {current_lv_sum}")
+                # print(f"  node.val = {node.val} | current_lv_sum = {current_lv_sum}")
                 if node.left:
                     queue.append(node.left)
                 if node.right:
@@ -26,6 +26,6 @@ class Solution:
             if current_lv_sum > max_sum:
                 max_sum = current_lv_sum
                 max_lv = current_lv
-                print(f"  max_lv = {max_lv}")
+                # print(f"  max_sum = {max_sum} | max_lv = {max_lv}")
             current_lv += 1    
         return max_lv
