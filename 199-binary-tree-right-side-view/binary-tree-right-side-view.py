@@ -20,7 +20,6 @@ class Solution:
                     queue.append(node.right)    # Add right
             if right_node:                      # If not empty, record val of right-most node
                 result.append(right_node.val)
-
         return result
 
 # Time O(n)
