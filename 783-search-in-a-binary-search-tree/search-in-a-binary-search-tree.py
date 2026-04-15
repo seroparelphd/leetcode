@@ -15,3 +15,6 @@ class Solution:
                 root = root.right
             else:
                 return []
+
+# Time O(H), h = height
+# Space O(1)
