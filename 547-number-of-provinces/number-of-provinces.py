@@ -13,5 +13,7 @@ class Solution:
             if isConnected[city][city] == 1:
                 num_provinces += 1
                 dfs(city)
-
         return num_provinces
+
+# Time: O(n^2)
+# Space: O(n)
