@@ -4,6 +4,7 @@ class Solution:
         stack = [0]
         while stack:
             current = stack.pop()
+            print(f"rooms[current] = {rooms[current]}")
             for key in rooms[current]:
                 if key not in visited:
                     visited.add(key)
@@ -11,3 +12,6 @@ class Solution:
         print(visited)
         print(rooms)
         return len(visited) == len(rooms)
+
+# Time O(n)
+# Space O(n)
