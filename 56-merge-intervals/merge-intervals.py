@@ -1,7 +1,8 @@
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         # print(sorted(intervals), intervals.sort())
-        intervals = sorted(intervals)
+        # intervals = sorted(intervals)
+        intervals.sort()
         # print(intervals, intervals[0])
         
         merged = [intervals[0]]  # empty list
@@ -21,3 +22,6 @@ class Solution:
                 merged.append(intervals[i])
 
         return merged
+
+# Time O()
+# Space O()
