@@ -9,7 +9,7 @@ class Solution:
         # else:
         #     return False
 
-        print(Counter(s), Counter(t))
+        # print(Counter(s), Counter(t))
         return Counter(s) == Counter(t)
 
 # Time: O(N log N)?
