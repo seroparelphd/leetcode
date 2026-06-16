@@ -13,7 +13,7 @@ class Solution:
         # return "".join(sorted(s)) == "".join(sorted(t))
 
         # print(Counter(s), Counter(t))
-        return Counter(s) == Counter(t)
+        return Counter(s) == Counter(t)  # Time O(N)?
 
 # Time: O(N log N)?
 # Space: O(N)
