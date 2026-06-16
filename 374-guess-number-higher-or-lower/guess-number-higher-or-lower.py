@@ -16,8 +16,10 @@ class Solution:
             print(f"  result = {result}")
             if result == 1:
                 left = middle + 1
+                # left = middle
             elif result == -1:
                 right = middle
+                # right = middle + 1
             else:
                 return middle
 
@@ -25,4 +27,4 @@ class Solution:
 # L       L M R     R
 
 # 1 2
-# L/M R
+# L R
