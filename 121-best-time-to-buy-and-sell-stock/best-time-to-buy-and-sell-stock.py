@@ -4,25 +4,19 @@ class Solution:
         max_profit = 0
         while r < len(prices):
             if prices[l] < prices[r]:
-                profit = prices[r] - prices[l]
-                max_profit = max(max_profit, profit)
+                diff = prices[r] - prices[l]
+                max_profit = max(max_profit, diff)
             else:
-                l = r  
+                l = r
             r += 1
         return max_profit
 
-# l = 0
-# r = 2
-# prices[l] = 7
-# prices[r] = 5
-# profit = 6
-# max_profit = 6
-
-
-
+# prices = [7,1,5,3,6,4]
+#           l r
 # l = 0
 # r = 1
-# max_profit = 0
-# prices[l] = 7
-# prices[r] = 1
-# profit = 6
+# diff = 
+# max_profit = 
+
+# Time O(N)
+# Space O(1)
