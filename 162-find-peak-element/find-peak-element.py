@@ -15,4 +15,4 @@ class Solution:
                 lo = mid + 1
             else:  # nums[mid] > nums[mid + 1]
                 hi = mid - 1
-
+        return -1
