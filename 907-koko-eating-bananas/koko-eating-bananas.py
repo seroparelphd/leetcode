@@ -4,7 +4,7 @@ class Solution:
         while lo <= hi:
             mid = lo + (hi - lo) // 2
             # mid = (hi + lo) // 2
-            # print(f"mid = {mid}")
+            print(f"mid = {mid}")
             hours = 0
             for p in piles:
                 hours += math.ceil(p / mid)
