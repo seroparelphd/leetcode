@@ -7,6 +7,7 @@ class Solution:
         for num in nums[k:]:
             # print(f"num = {num}")
             if num > min_heap[0]:
-                heapq.heappushpop(min_heap, num)
+                # heapq.heappushpop(min_heap, num)
+                heapq.heapreplace(min_heap, num)
             # print(f"  min_heap = {min_heap}")
         return min_heap[0]
