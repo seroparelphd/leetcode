@@ -8,5 +8,4 @@ class Solution:
                 return cache[i]
             cache[i] = cost[i] + min(dfs(i + 1), dfs(i + 2))
             return cache[i]
-
         return min(dfs(0), dfs(1))
