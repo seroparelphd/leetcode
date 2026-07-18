@@ -18,6 +18,7 @@ class Solution:
             for i in range(4, n + 1):
                 # f(n) = 2 * f(n - 1) + f(n - 3)
                 dp[i] = (2 * dp[i - 1] + dp[i - 3]) 
+            print(dp)
             return dp[n] % (10**9 + 7)  # return it modulo 10^9 + 7
 
 # ABCD
